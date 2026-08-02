@@ -105,13 +105,21 @@ nav a:hover {
   margin: 10px auto;
 }
 .contact h1 {
-  color: #fff;
+  color: transparent;
   text-align: center;
   font-size: 40px;
   margin: 10px auto;
+  background-clip: text;
+  background: linear-gradient(to right, blueviolet, cyan);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .contact h2 {
-  color: #fff;
+  background: linear-gradient(to right, blueviolet, cyan);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
   text-align: center;
   font-size: 40px;
   margin: 10px auto;
@@ -149,6 +157,20 @@ nav a:hover {
   font-size: 40px;
   margin: 10px auto;
 }
+@media (max-width: 768px) {
+  .about h1,
+  .education h1,
+  .contact h1,
+  .contact h2,
+  .hobbies h1,
+  .home h1,
+  .journey h1,
+  .journey h2,
+  .projects h1,
+  .skills h1 {
+    font-size: 30px;
+  }
+}
 .about p,
 .contact p,
 .education p,
@@ -183,14 +205,16 @@ nav a:hover {
   font-size: 33px;
   color: rgb(8, 84, 87);
   margin-bottom: 20px;
-  font-weight: bold;
+  background: linear-gradient(to right, blueviolet, cyan);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .social-icons {
   display: flex;
   justify-content: center;
   overflow: hidden;
   gap: 35px;
-  background: #fff;
+  background: transparent;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -293,7 +317,8 @@ nav a:hover {
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
-  padding: 40px;
+  padding: 20px;
+  padding-top: 5px;
   flex-wrap: wrap;
 }
 .contact {
@@ -350,7 +375,7 @@ footer {
   color: #bbb;
   text-align: center;
   padding: 3px;
-  margin-top: 3px;
+  margin-top: 20px;
   border-radius: 10px 10px 0px 0px;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
@@ -367,9 +392,9 @@ footer {
   max-width: 250px;
   gap: 15px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 30%;
   transition: 0.4s;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 .image img:hover {
   transform: scale(1.08) rotate(3deg);
